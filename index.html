@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>DoChanSi · ย้ายบ้านแล้ว</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@600;800&display=swap">
+<style>
+:root{--bg:#f6f4ef;--ink:#10201b;--g:#1f6b55;--y:#e0b100}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1714;--ink:#eef3f0;--g:#4cc39e;--y:#ffd84d}}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg);color:var(--ink);font-family:Kanit,sans-serif;text-align:center;padding:24px 16px;box-sizing:border-box}
+h1{font-size:2.6rem;margin:0 0 6px;font-weight:800}h1 span{color:var(--y)}
+p{margin:6px 0 22px;opacity:.8}
+a.go{display:inline-block;background:var(--g);color:#fff;text-decoration:none;padding:14px 28px;border-radius:14px;font-weight:600}
+small{display:block;margin-top:28px;opacity:.55}
+</style>
+</head>
+<body>
+<main>
+  <h1>Do<span>Chan</span>Si</h1>
+  <p>เว็บย้ายบ้านแล้วค่ะ · กำลังพาไป…</p>
+  <a class="go" id="go" href="#">ไปเว็บใหม่ →</a>
+  <small>© 2026 DoChanSi · สงวนลิขสิทธิ์</small>
+</main>
+<script>
+/* new home; the ?from= tag (tiktok / fb ...) is carried over for the counter */
+const NEW_URL='__NEW_URL__';
+if(NEW_URL.indexOf('__')!==0){const u=NEW_URL+(location.search||'');document.getElementById('go').href=u;location.replace(u);}
+else{document.getElementById('go').style.display='none';}
+</script>
+</body>
+</html>
